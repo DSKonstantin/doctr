@@ -17,5 +17,13 @@ class DetectionOut(BaseModel):
     box: Tuple[float, float, float, float]
 
 
+class ConfidenceOut(BaseModel):
+    confidence: float = Field(..., example="Hello")
+
+
 class OCROut(RecognitionOut, DetectionOut):
+    pass
+
+
+class OCRWordsOut(RecognitionOut, ConfidenceOut):
     pass
