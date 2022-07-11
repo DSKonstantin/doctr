@@ -11,8 +11,8 @@ if any(gpu_devices):
 
 from doctr.models import ocr_predictor
 
-# predictor = ocr_predictor(pretrained=True, det_arch='linknet_resnet18_rotation')
-# predictor = ocr_predictor(pretrained=True, det_arch='linknet_resnet18_rotation', assume_straight_pages=False)
-predictor = ocr_predictor(pretrained=True)
+# predictor = ocr_predictor(pretrained=True, det_arch='db_mobilenet_v3_large')
+predictor = ocr_predictor(pretrained=True, det_arch='linknet_resnet18_rotation', assume_straight_pages=False)
+# predictor = ocr_predictor(pretrained=True)
 det_predictor = predictor.det_predictor
 reco_predictor = predictor.reco_predictor
